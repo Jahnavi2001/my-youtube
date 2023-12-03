@@ -2,10 +2,15 @@ import React, { useEffect, useState } from "react"
 import VideoCard, { AdVideoCard } from './VideoCard'
 import VIDEO_LIST_API from "../utils/constants"
 import {Link} from 'react-router-dom'
+import { addVideosList } from "../utils/videoSlice"
+import { useDispatch, useSelector } from "react-redux"
 
 const VideoContainer = () => {
 
-  const [videoList, setVideoList] = useState([])
+  const dispatch = useDispatch()
+
+  const videoList = useSelector((store) => store.video.videoList)
+  console.log("🚀 > VideoContainer > videoList:", videoList)
     
   useEffect(() => {
     fetchVideoList()
@@ -14,7 +19,16 @@ const VideoContainer = () => {
   const fetchVideoList = async() => {
     const data = await fetch(VIDEO_LIST_API)
     const json = await data.json()
-    setVideoList(json.items)
+    dispatch(addVideosList(json.items))
+    
+  }
+
+  if (!videoList) {
+    return (
+      <div>
+        Error
+      </div>
+    )
   }
 
   if (!videoList.length) {
@@ -38,7 +52,7 @@ const VideoContainer = () => {
 
   return (
     
-    <div className="my-6 flex flex-wrap">
+    <div className="my-6 flex flex-wrap h-[80vh] overflow-y-scroll">
       <AdVideoCard data={ videoList[45]} />
       {
         videoList.map((video) => (

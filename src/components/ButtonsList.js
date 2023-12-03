@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
-const list = ["All", 'Music', 'Mixes', 'Bigboss', 'Old Films', 'Rituals', 'Live', "Dhee", 'Cooling Show', 'Courses', 'Fashion', 'Watched', 'New to you', 'Filmi', 'Game shows', 'India pop music', 'Gadgets', 'Ceremonies'];
+const list = ["All", 'Music', 'ReactJs', 'Bigboss', 'VueJs', 'Pinia', 'Redux', "Telugu Songs", 'Cooling Show', 'Courses', 'Fashion', 'Cricket', 'Movies', 'Filmi', 'Game shows', 'India pop music', 'Gadgets', 'Ceremonies'];
 
 const ButtonsList = () => {
   return (

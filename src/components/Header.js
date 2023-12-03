@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
-import { YOUTUBE_SEARCH_API } from "../utils/constants";
+import { YOUTUBE_SEARCH_SUGGESTIONS_API } from "../utils/constants";
 import { cachedSearchData } from "../utils/searchSlice";
 
+
 const Header = () => {
+  const user = useSelector((store) => store.user);
+
   const dispatch = useDispatch();
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -13,28 +16,29 @@ const Header = () => {
 
   const [showSuggestionList, setShowSuggestionList] = useState(false);
 
-  const searchCachedData = useSelector(store => store.search)
+  const searchCachedData = useSelector((store) => store.search);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if(!searchCachedData[searchQuery]){
+      if (!searchCachedData[searchQuery]) {
         fetchSearchList();
       }
-    }, 200)
+    }, 200);
 
     return () => {
-      clearInterval(timer)
-    }
-
+      clearInterval(timer);
+    };
   }, [searchQuery]);
 
   const fetchSearchList = async () => {
-    const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+    const data = await fetch(YOUTUBE_SEARCH_SUGGESTIONS_API + searchQuery);
     const json = await data.json();
     setSearchList(json[1]);
-    dispatch(cachedSearchData({
-      [searchQuery]: searchList
-    }))
+    dispatch(
+      cachedSearchData({
+        [searchQuery]: searchList,
+      })
+    );
   };
 
   const handleToggleMenu = () => {
@@ -42,7 +46,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex shadow-sm items-center px-8 justify-between sticky top-0 bg-white">
+    <div className="flex shadow-sm items-center px-8 justify-between sticky top-0 bg-white z-10">
       <div className="flex items-center gap-5">
         <img
           onClick={handleToggleMenu}
@@ -86,13 +90,14 @@ const Header = () => {
           </div>
         )}
       </div>
-      <div>
+      {user && (
         <img
-          className="w-10 h-10"
-          src="https://cdn-icons-png.flaticon.com/512/64/64572.png"
+          referrerPolicy="no-referrer"
+          className="w-10 h-10 rounded-full"
+          src="https://lh3.googleusercontent.com/a/ACg8ocJILHbuLUAIYGp4BTbzzavWPuPH41QM9PplqT5Gvhue=s96-c"
           alt="profile-icon"
         />
-      </div>
+      )}
     </div>
   );
 };

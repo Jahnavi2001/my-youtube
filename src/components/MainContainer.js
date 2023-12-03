@@ -8,7 +8,7 @@ const MainContainer = () => {
   const showMenu = useSelector((store) => store.app.isMenuOpen)
 
   return (
-    <div className="p-8 pt-4 flex gap-4">
+    <div className="px-8 pt-4 pb-0 flex gap-4">
       <div className={showMenu ? "w-1/6" : ''}>
         <Sidebar />
       </div>
