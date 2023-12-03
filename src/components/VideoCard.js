@@ -1,13 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const VideoCard = ({ data }) => {
+
+  const showMenu = useSelector((store) => store.app.isMenuOpen);
+
   const { snippet, statistics } = data;
   const { title, channelTitle, thumbnails } = snippet;
 
   return (
-    <div className="rounded-lg w-96 my-6 mx-4 cursor-pointer">
+    <div className={"rounded-lg my-6 mx-4 cursor-pointer " + (showMenu ? "w-[368px]" : "w-80")}>
       <img
-        className="w-96 rounded-lg"
+        className={"rounded-lg " + (showMenu ? "w-[368px]" : "w-80")}
         src={thumbnails.medium.url}
         alt="video-data"
       />

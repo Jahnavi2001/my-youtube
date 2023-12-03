@@ -20,25 +20,25 @@ const VideoContainer = () => {
   if (!videoList.length) {
     return (
       <div className="flex flex-wrap mt-4">
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
-        <div className="bg-gray-100 rounded-lg w-96 h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
+        <div className="bg-gray-100 rounded-lg w-[368px] h-56 my-6 mx-4"></div>
       </div>
     )
   }
 
   return (
     
-    <div className="my-6 flex flex-wrap h-[80vh] overflow-y-auto">
+    <div className="my-6 flex flex-wrap">
       <AdVideoCard data={ videoList[45]} />
       {
         videoList.map((video) => (
