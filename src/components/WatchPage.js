@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
 import LiveChat from "./LiveChat";
 import Sidebar from "./Sidebar";
+import { closeMenu } from "../store/appSlice";
 
 const WatchPage = () => {
   const showMenu = useSelector((store) => store.app.isMenuOpen);

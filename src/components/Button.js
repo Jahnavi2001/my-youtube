@@ -1,6 +1,6 @@
 import React from "react";
 import { YOUTUBE_SEARCH_LIST_API } from "../utils/constants";
-import { addVideosList } from "../utils/videoSlice";
+import { addVideosList } from "../store/videoSlice";
 import { useDispatch } from "react-redux";
 
 const Button = ({ name }) => {

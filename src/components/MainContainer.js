@@ -1,8 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import ButtonsList from "./ButtonsList";
 import VideoContainer from "./VideoContainer";
 import Sidebar from "./Sidebar";
-import { useSelector } from "react-redux";
 
 const MainContainer = () => {
   const showMenu = useSelector((store) => store.app.isMenuOpen)

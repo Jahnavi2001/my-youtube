@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react"
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import {Link} from 'react-router-dom'
 import VideoCard, { AdVideoCard } from './VideoCard'
 import VIDEO_LIST_API from "../utils/constants"
-import {Link} from 'react-router-dom'
-import { addVideosList } from "../utils/videoSlice"
-import { useDispatch, useSelector } from "react-redux"
+import { addVideosList } from "../store/videoSlice"
 
 const VideoContainer = () => {
 

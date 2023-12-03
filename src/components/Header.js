@@ -1,9 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_SUGGESTIONS_API } from "../utils/constants";
-import { cachedSearchData } from "../utils/searchSlice";
-
+import { toggleMenu } from "../store/appSlice";
+import { cachedSearchData } from "../store/searchSlice";
 
 const Header = () => {
   const user = useSelector((store) => store.user);
