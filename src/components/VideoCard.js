@@ -12,7 +12,7 @@ const VideoCard = ({ data }) => {
   const { snippet, statistics, contentDetails } = data;
   const { title, channelTitle, thumbnails, channelId, publishedAt } = snippet;
 
-  const seconds = moment.duration(contentDetails.duration).asSeconds();
+  const seconds = moment.duration(contentDetails?.duration).asSeconds();
   const duration = moment.utc(seconds * 1000).format("mm:ss");
 
   const fetchChannelList = async () => {
@@ -22,7 +22,7 @@ const VideoCard = ({ data }) => {
   };
 
   useEffect(() => {
-    fetchChannelList();
+    // fetchChannelList();
   }, []);
 
   return (
@@ -57,7 +57,7 @@ const VideoCard = ({ data }) => {
           <div className="text-sm">{channelTitle}</div>
           <div className="text-sm flex gap-1 items-center">
             <span>
-              {numeral(statistics.viewCount).format("0.0a").toUpperCase()} views
+              {numeral(statistics?.viewCount).format("0.0a").toUpperCase()} views
             </span>
             <span>•</span>
             <span>{moment(publishedAt).fromNow()}</span>

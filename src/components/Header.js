@@ -54,49 +54,53 @@ const Header = () => {
           src="https://icons.veryicon.com/png/o/miscellaneous/linear-icon-45/hamburger-menu-5.png"
           alt="hamburger-logo"
         />
-        <img
-          className="w-36"
-          src="https://t3.ftcdn.net/jpg/03/00/38/90/360_F_300389025_b5hgHpjDprTySl8loTqJRMipySb1rO0I.jpg"
-          alt="youtube-logo"
-        />
-      </div>
-      <div className="relative">
-        <div>
-          <input
-            className="w-[600px] border rounded-l-full py-2 px-6"
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onFocus={() => {
-              setShowSuggestionList(true);
-            }}
-            onBlur={() => {
-              setShowSuggestionList(false);
-            }}
+        <a href="/">
+          <img
+            className="w-36 cursor-pointer"
+            src="https://t3.ftcdn.net/jpg/03/00/38/90/360_F_300389025_b5hgHpjDprTySl8loTqJRMipySb1rO0I.jpg"
+            alt="youtube-logo"
           />
-          <button className="bg-gray-200 border rounded-r-full p-2">
-            Search
-          </button>
-        </div>
-        {showSuggestionList && (
-          <div className="absolute bg-white rounded-2xl p-4 shadow-lg border border-gray-200 w-[37.5rem] mt-0.5">
-            <ul>
-              {searchList.map((item) => (
-                <li className="p-2 hover:bg-gray-200 rounded-lg" key={item}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        </a>
       </div>
       {user && (
-        <img
-          referrerPolicy="no-referrer"
-          className="w-10 h-10 rounded-full"
-          src="https://lh3.googleusercontent.com/a/ACg8ocJILHbuLUAIYGp4BTbzzavWPuPH41QM9PplqT5Gvhue=s96-c"
-          alt="profile-icon"
-        />
+        <>
+          <div className="relative">
+            <div>
+              <input
+                className="w-[600px] border rounded-l-full py-2 px-6"
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onFocus={() => {
+                  setShowSuggestionList(true);
+                }}
+                onBlur={() => {
+                  setShowSuggestionList(false);
+                }}
+              />
+              <button className="bg-gray-200 border rounded-r-full p-2">
+                Search
+              </button>
+            </div>
+            {showSuggestionList && (
+              <div className="absolute bg-white rounded-2xl p-4 shadow-lg border border-gray-200 w-[37.5rem] mt-0.5">
+                <ul>
+                  {searchList.map((item) => (
+                    <li className="p-2 hover:bg-gray-200 rounded-lg" key={item}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+          <img
+            referrerPolicy="no-referrer"
+            className="w-10 h-10 rounded-full"
+            src="https://lh3.googleusercontent.com/a/ACg8ocJILHbuLUAIYGp4BTbzzavWPuPH41QM9PplqT5Gvhue=s96-c"
+            alt="profile-icon"
+          />
+        </>
       )}
     </div>
   );

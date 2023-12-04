@@ -1,9 +1,9 @@
 import "./App.css";
-import Body from "./components/Body";
-import Header from "./components/Header.js";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/index";
-import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
+import Body from "./components/Body";
+import Header from "./components/Header";
 import MainContainer from "./components/MainContainer";
 import WatchPage from "./components/WatchPage";
 import Login from "./components/Login";

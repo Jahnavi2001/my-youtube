@@ -1,38 +1,12 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from '../utils/firebase'
-import { Outlet, useNavigate } from 'react-router-dom'
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { addUser, removeUser } from "../store/userSlice";
+import { Outlet } from "react-router-dom";
+import React from "react";
+import useAuth from "../hooks/useAuth";
 
 const Body = () => {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  // Created custom hook
+  useAuth();
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in
-        const { uid, email, displayName, photoURL } = user;
-        dispatch(addUser({ uid, email, displayName, photoURL }));
-        navigate("/");
-      } else {
-        // User is signed out
-        dispatch(removeUser());
-        navigate("/auth");
-      }
-    });
+  return <Outlet />;
+};
 
-    // Unsubscribe when component unmounts
-    return () => unsubscribe();
-  }, []);
-
-  return (
-    <div>
-      <Outlet/>
-    </div>
-  )
-}
-
-export default Body
+export default Body;

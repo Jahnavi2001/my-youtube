@@ -17,16 +17,12 @@ const Sidebar = () => {
   const showMenu = useSelector((store) => store.app.isMenuOpen);
 
   const handleLogout = () => {
-    console.log("handleLogout");
     signOut(auth)
     .then(() => {})
     .catch((error) => {
       navigate("/error");
     });
   };
-
-  // Early return pattern
-  // if (!showMenu) return null;
 
   return (
     <div>
