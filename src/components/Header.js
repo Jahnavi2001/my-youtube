@@ -97,7 +97,7 @@ const Header = () => {
           <img
             referrerPolicy="no-referrer"
             className="w-10 h-10 rounded-full"
-            src="https://lh3.googleusercontent.com/a/ACg8ocJILHbuLUAIYGp4BTbzzavWPuPH41QM9PplqT5Gvhue=s96-c"
+            src={user.photoURL}
             alt="profile-icon"
           />
         </>
