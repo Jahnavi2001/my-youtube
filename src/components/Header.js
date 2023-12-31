@@ -48,7 +48,6 @@ const Header = () => {
   return (
     <div className="flex shadow-sm items-center px-8 justify-between sticky top-0 bg-white z-10">
       <div className="flex items-center gap-5">
-        Hekko
         <img
           onClick={handleToggleMenu}
           className="w-12 h-12 cursor-pointer"
