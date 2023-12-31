@@ -4,31 +4,31 @@ import CommentsList from "./CommentsList";
 const commentsData = [
   {
     name: 'Jahnavi',
-    text: 'I am learning react hoping i will do my best',
+    text: 'Trying out comments along with nested.',
     replies: [
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: [
           {
             name: 'Jahnavi',
-            text: 'I am learning react hoping i will do my best',
+            text: 'Trying out comments along with nested.',
             replies: [
               {
                 name: 'Jahnavi',
-                text: 'I am learning react hoping i will do my best',
+                text: 'Trying out comments along with nested.',
                 replies: [
                   {
                     name: 'Jahnavi',
-                    text: 'I am learning react hoping i will do my best',
+                    text: 'Trying out comments along with nested.',
                     replies: [
                       {
                         name: 'Jahnavi',
-                        text: 'I am learning react hoping i will do my best',
+                        text: 'Trying out comments along with nested.',
                         replies: [
                           {
                             name: 'Jahnavi',
-                            text: 'I am learning react hoping i will do my best',
+                            text: 'Trying out comments along with nested.',
                             replies: []
                           }
                         ]
@@ -39,18 +39,18 @@ const commentsData = [
               },
               {
                 name: 'Jahnavi',
-                text: 'I am learning react hoping i will do my best',
+                text: 'Trying out comments along with nested.',
                 replies: [
                   {
                     name: 'Jahnavi',
-                    text: 'I am learning react hoping i will do my best',
+                    text: 'Trying out comments along with nested.',
                     replies: []
                   }
                 ]
               },
               {
                 name: 'Jahnavi',
-                text: 'I am learning react hoping i will do my best',
+                text: 'Trying out comments along with nested.',
                 replies: []
               }
             ]
@@ -59,20 +59,20 @@ const commentsData = [
       },
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: [
           {
             name: 'Jahnavi',
-            text: 'I am learning react hoping i will do my best',
+            text: 'Trying out comments along with nested.',
             replies: []
           },
           {
             name: 'Jahnavi',
-            text: 'I am learning react hoping i will do my best',
+            text: 'Trying out comments along with nested.',
             replies: [
               {
                 name: 'Jahnavi',
-                text: 'I am learning react hoping i will do my best',
+                text: 'Trying out comments along with nested.',
                 replies: []
               }
             ]
@@ -83,94 +83,94 @@ const commentsData = [
   },
   {
     name: 'Jahnavi',
-    text: 'I am learning react hoping i will do my best',
+    text: 'Trying out comments along with nested.',
     replies: []
   },
   {
     name: 'Jahnavi',
-    text: 'I am learning react hoping i will do my best',
+    text: 'Trying out comments along with nested.',
     replies: [
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: [
           {
             name: 'Jahnavi',
-            text: 'I am learning react hoping i will do my best',
+            text: 'Trying out comments along with nested.',
             replies: []
           },
           {
             name: 'Jahnavi',
-            text: 'I am learning react hoping i will do my best',
+            text: 'Trying out comments along with nested.',
             replies: []
           }
         ]
       },
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: []
       },
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: []
       },
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: []
       },
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: []
       }
     ]
   },
   {
     name: 'Jahnavi',
-    text: 'I am learning react hoping i will do my best',
+    text: 'Trying out comments along with nested.',
     replies: []
   },
   {
     name: 'Jahnavi',
-    text: 'I am learning react hoping i will do my best',
+    text: 'Trying out comments along with nested.',
     replies: [
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: [
           {
             name: 'Jahnavi',
-            text: 'I am learning react hoping i will do my best',
+            text: 'Trying out comments along with nested.',
             replies: []
           },
           {
             name: 'Jahnavi',
-            text: 'I am learning react hoping i will do my best',
+            text: 'Trying out comments along with nested.',
             replies: []
           }
         ]
       },
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: []
       },
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: []
       },
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: []
       },
       {
         name: 'Jahnavi',
-        text: 'I am learning react hoping i will do my best',
+        text: 'Trying out comments along with nested.',
         replies: []
       }
     ]
