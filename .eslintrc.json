@@ -3,11 +3,8 @@
 		"browser": true,
 		"es2021": true
 	},
-	"extends": ["plugin:react/recommended", "airbnb", "prettier"],
+	"extends": ["standard", "plugin:react/recommended", "prettier"],
 	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		},
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
