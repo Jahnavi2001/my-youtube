@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { YOUTUBE_SEARCH_SUGGESTIONS_API } from '../utils/constants';
@@ -78,7 +77,9 @@ const Header = () => {
 									setShowSuggestionList(false);
 								}}
 							/>
-							<button className="bg-gray-200 border rounded-r-full p-2">Search</button>
+							<button className="bg-gray-200 border rounded-r-full p-2">
+								Search
+							</button>
 						</div>
 						{showSuggestionList && (
 							<div className="absolute bg-white rounded-2xl p-4 shadow-lg border border-gray-200 w-[37.5rem] mt-0.5">

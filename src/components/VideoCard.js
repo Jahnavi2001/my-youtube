@@ -22,13 +22,14 @@ const VideoCard = ({ data }) => {
 	};
 
 	useEffect(() => {
-		// fetchChannelList();
+		fetchChannelList();
 	}, []);
 
 	return (
 		<div
 			className={
-				'rounded-lg my-6 mx-4 cursor-pointer ' + (showMenu ? 'w-[368px]' : 'w-80')
+				'rounded-lg my-6 mx-4 cursor-pointer ' +
+				(showMenu ? 'w-[368px]' : 'w-80')
 			}
 		>
 			<div className="relative">
@@ -56,7 +57,8 @@ const VideoCard = ({ data }) => {
 					<div className="text-sm">{channelTitle}</div>
 					<div className="text-sm flex gap-1 items-center">
 						<span>
-							{numeral(statistics?.viewCount).format('0.0a').toUpperCase()} views
+							{numeral(statistics?.viewCount).format('0.0a').toUpperCase()}{' '}
+							views
 						</span>
 						<span>•</span>
 						<span>{moment(publishedAt).fromNow()}</span>
