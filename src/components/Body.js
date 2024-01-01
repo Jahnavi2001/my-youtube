@@ -1,12 +1,12 @@
-import { Outlet } from "react-router-dom";
-import React from "react";
-import useAuth from "../hooks/useAuth";
+import { Outlet } from 'react-router-dom';
+import React from 'react';
+import useAuth from '../hooks/useAuth';
 
 const Body = () => {
-  // Created custom hook
-  useAuth();
+	// Created custom hook
+	useAuth();
 
-  return <Outlet />;
+	return <Outlet />;
 };
 
 export default Body;

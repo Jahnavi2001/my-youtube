@@ -1,18 +1,18 @@
-import { configureStore } from '@reduxjs/toolkit'
-import appSlice from './appSlice'
-import searchSlice from './searchSlice'
-import chatSlice from './chatSlice'
-import userSlice from './userSlice'
-import videoSlice from './videoSlice'
+import { configureStore } from '@reduxjs/toolkit';
+import appSlice from './appSlice';
+import searchSlice from './searchSlice';
+import chatSlice from './chatSlice';
+import userSlice from './userSlice';
+import videoSlice from './videoSlice';
 
 const store = configureStore({
-  reducer: {
-    app: appSlice,
-    search: searchSlice,
-    chat: chatSlice,
-    user: userSlice,
-    video: videoSlice
-  }
-})
+	reducer: {
+		app: appSlice,
+		search: searchSlice,
+		chat: chatSlice,
+		user: userSlice,
+		video: videoSlice,
+	},
+});
 
-export default store
+export default store;

@@ -1,17 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const searchSlice = createSlice({
-  name: 'search',
-  initialState: {
+	name: 'search',
+	initialState: {},
+	reducers: {
+		cachedSearchData: (state, action) => {
+			state = Object.assign(state, action.payload);
+		},
+	},
+});
 
-  },
-  reducers: {
-    cachedSearchData: (state, action) => {
-      state = Object.assign(state, action.payload)
-    }
-  }
-})
+export const { cachedSearchData } = searchSlice.actions;
 
-export const { cachedSearchData } = searchSlice.actions
-
-export default searchSlice.reducer
+export default searchSlice.reducer;
